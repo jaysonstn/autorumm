@@ -1,0 +1,347 @@
+/* Importação da fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilo base */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+  color: #212529;
+}
+
+/* Navbar personalizada */
+/* Navbar link animation - amarelo com sublinhado animado */
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ddac14; /* Cor do tema */
+  transition: width 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ddac14; /* Muda cor do texto */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+  transform: scale(0.95);
+}
+
+
+/* Responsividade da logo */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px;
+  }
+}
+
+/* Texto digitado na home */
+#typed-text {
+  font-weight: bold;
+  color: #ddac14;
+  font-size: 1.5rem;
+}
+
+/* Container home deve ter position relative para conter os botões */
+#home.position-relative {
+  position: relative;
+}
+
+/* Botões fixos no canto superior direito da home */
+.social-home-fixed {
+  left: 20px; /* mais afastado da borda esquerda */
+  bottom: 30px; /* canto inferior esquerdo */
+  top: auto;    /* desativa top para bottom funcionar */
+  transform: none;
+  flex-direction: row; /* ícones em linha horizontal, não coluna */
+  gap: 15px;
+  position: fixed;
+  z-index: 10000;
+  background: rgba(0,0,0,0.4);
+  padding: 8px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+
+.social-home-fixed a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #000;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-home-fixed a:hover {
+  background-color: #ddac14;
+  transform: scale(1.1);
+}
+
+.social-home-fixed img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+
+/* Seções gerais */
+.section {
+  padding: 80px 0;
+  text-align: center;
+  transition: padding 0.3s ease-in-out;
+}
+
+/* Cartões de serviços */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: transform 0.4s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c; /* opcional, para contraste com imagem */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: 100%; /* permite que todos os cards da grid tenham mesma altura */
+}
+
+.service-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3; /* mantém proporção sem cortar conteúdo */
+  border-radius: 1rem 1rem 0 0;
+  transition: transform 0.4s ease;
+}
+
+.service-card h5 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #000; /* fundo para contraste */
+  border-radius: 0 0 1rem 1rem;
+  flex-shrink: 0;
+}
+
+/* Sombra amarela ao passar o mouse */
+.service-card::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(221, 172, 20, 0.8), transparent);
+  transition: bottom 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 1rem;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card:hover img {
+  transform: scale(1.03);
+}
+
+.service-card:hover::after {
+  bottom: 0;
+}
+
+/*Diferenciais*/
+#diferenciais img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+#diferenciais img:hover {
+  transform: scale(1.1);
+}
+#diferenciais h5 {
+  color: #ddac14;
+  margin-bottom: 10px;
+}
+
+
+
+/* localização */
+.localizacao-section {
+  background: linear-gradient(135deg, #222222 0%, #1a1a1a 100%);
+  /* Cor escura, moderna e suave */
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+}
+
+.localizacao-section h2,
+.localizacao-section p {
+  color: #eee; /* texto claro */
+}
+
+.map-responsive {
+  background: transparent !important;
+  position: relative;
+  padding-bottom: 56.25%; /* mantém 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.map-responsive iframe {
+  background: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 1rem;
+}
+
+/*Contato */
+.whatsapp-contato {
+  background-color: #1c1c1c;
+  border-top: 4px solid #ddac14;
+  border-bottom: 4px solid #ddac14;
+}
+
+.whatsapp-contato .btn-warning {
+  background-color: #25D366;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-contato .btn-warning:hover {
+  background-color: #1ebc57;
+}
+
+/* Animação pulsante */
+.whatsapp-animate {
+  animation: pulse 1.8s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+
+
+/* Botão WhatsApp flutuante *//*
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center center;
+  background-size: 60%;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
+  display: block;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.8);
+}
+
+
+/* Footer */
+.footer-custom {
+  background-color: #111;
+  border-top: 4px solid #ddac14;
+}
+
+.footer-link {
+  color: #ddac14;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* Plano de fundo da seção Home */
+#home,
+.home-bg {
+  background-image: url('../img/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.home-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82));
+  z-index: 0;
+}
+
+.home-bg h1 {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+.home-bg h3,
+.home-bg p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+
+

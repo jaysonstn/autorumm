@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Rumm</title>
+  <meta name="description" content="A Auto Rumm é uma oficina mecânica em Caçador especializada em revisão completa, suspensão, freios, troca de fluido de transmissão, motor, arrefecimento e mais. Atendimento profissional e especializado.">
+  <meta name="keywords" content="Oficina mecânica em Caçador, manutenção preventiva, mecânica Caçador, Auto Rumm, revisão automotiva, troca de fluido de transmissão, powershift, câmbio automático, arrefecimento, mecânica de freios, suspensão automotiva">
+  <meta name="author" content="Desenvolvido por Jota Softwares">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.jpeg" type="image/png">
+
+  <link rel="stylesheet" href="./Styles/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="javascript:void(0);" data-target="home">
+        <img src="./img/logo.jpeg" alt="Auto Rumm Logo" class="rounded" style="height: 40px; width: auto;" />
+        <span class="ms-2 fw-bold">Auto Rumm</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="javascript:void(0);" data-target="home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript:void(0);" data-target="Servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript:void(0);" data-target="Contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="section home-bg d-flex align-items-center text-white text-center text-md-start">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="mb-3">Seu carro merece o melhor cuidado!</h1>
+          <p class="lead">Somos especialistas em <span id="typed-text" class="fw-bold text-warning"></span></p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Botões fixos dentro da home -->
+    <div class="social-home-fixed">
+      <a href="https://wa.me/5549988065312" target="_blank" aria-label="WhatsApp">
+        <img src="./img/whatsapp-logo.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.instagram.com/auto_rumm/" target="_blank" aria-label="Instagram">
+        <img src="./img/instagram.png" alt="Instagram" />
+      </a>
+    </div>
+  </section>
+
+
+  <!--Serviços-->
+  <section id="Servicos" class="py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="text-warning text-center mb-5">Nossos Serviços</h2>
+    <div class="row text-center">
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/suspensão.jpg" alt="Revisão de suspensão" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Revisão de Suspensão</h5>
+          <p>Verificação completa de amortecedores, molas e componentes para uma condução segura.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/freios.jpg" alt="Revisão de freios" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Revisão de Freios</h5>
+          <p>Inspeção e troca de pastilhas, discos e fluido para máxima eficiência na frenagem.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/troca-de-oleo.jpg" alt="Troca de fluido de transmissão" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Troca de Fluido de Transmissão</h5>
+          <p>Evite danos ao câmbio com a troca preventiva do fluido de transmissão automática.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/arrefecimento.jpg" alt="Sistema de arrefecimento" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Sistema de Arrefecimento</h5>
+          <p>Limpeza e troca do fluido para manter o motor na temperatura ideal de funcionamento.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/motor.jpg" alt="Revisão de motor" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Revisão de Motor</h5>
+          <p>Diagnóstico e manutenção preventiva para garantir performance e economia.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="service-card p-3 bg-secondary rounded">
+          <img src="./img/embreagem.jpg" alt="Revisão de embreagem" class="img-fluid mb-3 rounded">
+          <h5 class="text-warning">Revisão de Embreagem</h5>
+          <p>Avaliação do desgaste e troca do kit de embreagem com peças de qualidade.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Diferenciais -->
+<section id="diferenciais" class="py-5 text-light" style="background-color: #111;">
+  <div class="container">
+    <h2 class="text-center mb-4 text-warning">Por que escolher a Auto Rumm?</h2>
+    <div class="row g-4">
+      <div class="col-md-4 text-center">
+        <img src="./img/high-quality.png" alt="Qualidade Garantida" width="60" class="mb-3">
+        <h5>Qualidade Garantida</h5>
+        <p>Utilizamos peças de alta qualidade e seguimos os padrões das montadoras para garantir a segurança e desempenho do seu veículo.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./img/expert.png" alt="Especialistas em Revisões" width="60" class="mb-3">
+        <h5>Especialistas em Revisões</h5>
+        <p>Realizamos revisões completas com foco em suspensão, sistema de freios, fluido de transmissão, arrefecimento, embreagem e motor.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./img/customer-service.png" alt="Atendimento Personalizado" width="60" class="mb-3">
+        <h5>Atendimento Personalizado</h5>
+        <p>Você fala diretamente com os responsáveis pela manutenção. Explicamos tudo de forma clara e com transparência total.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./img/clock.png" alt="Pontualidade" width="60" class="mb-3">
+        <h5>Pontualidade</h5>
+        <p>Agende e receba seu carro no prazo combinado. Trabalhamos com agendamentos para garantir agilidade e qualidade no serviço.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./img/whatsapp.png" alt="Contato Fácil" width="60" class="mb-3">
+        <h5>Agendamento Facilitado</h5>
+        <p>Agende seu serviço facilmente pelo WhatsApp. Rápido, prático e direto com a oficina.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./img/trust.png" alt="Transparência e Confiança" width="60" class="mb-3">
+        <h5>Transparência e Confiança</h5>
+        <p>Sem surpresas. Todos os serviços são previamente explicados com orçamento e aprovação do cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!--Localização-->
+ <section id="localizacao" class="section localizacao-section py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center text-white">Nossa Localização</h2>
+    <p class="text-center mb-4 text-white-50">
+      Visite nossa oficina Auto Rumm no endereço abaixo. Estamos prontos para cuidar do seu carro com excelência!
+    </p>
+    <div class="map-responsive mx-auto" style="max-width: 500px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.7814898774013!2d-50.981587823926816!3d-26.783234376724582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6cb4ac7b46ba7%3A0x3c0610c12e0f2d1!2sAuto%20Rumm!5e0!3m2!1spt-BR!2sbr!4v1748189277725!5m2!1spt-BR!2sbr" 
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+        title="Mapa de localização Auto Rumm">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<!--Contato-->
+<section id="Contato" class="whatsapp-contato text-center py-5">
+  <div class="container">
+    <h3 class="text-white mb-4">Contato:</h3>
+    <h5 class="text-white mb-4">(49) 98806-5312</h5>
+    <h3 class="text-white mb-4">Agende seu serviço via WhatsApp</h3>
+    <p class="text-light fs-5 mb-4">Fale diretamente conosco e garanta o melhor atendimento.</p>
+    <a href="https://wa.me/5549988065312" target="_blank" class="btn btn-warning btn-lg shadow whatsapp-animate">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" class="me-2">Agendar via WhatsApp</a>
+
+  </div>
+</section>
+
+
+<!-- Botão WhatsApp flutuante --><!--
+<a href="https://wa.me/5549988065312" target="_blank" class="whatsapp-btn" aria-label="Contato WhatsApp"></a>-->
+
+
+
+
+  <!-- Rodapé -->
+<footer class="footer-custom text-center py-4">
+  <div class="container">
+    <p class="mb-1 text-light">&copy; 2025 Auto Rumm. Todos os direitos reservados.</p>
+    <p class="mb-0 text-muted small">
+      Desenvolvido por 
+      <a href="https://www.jotasoftwares.com.br" target="_blank" class="footer-link">Jota Softwares</a>
+    </p>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+  <script src="./Scripts/script.js"></script>
+</body>
+</html>
